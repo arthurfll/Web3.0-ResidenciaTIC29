@@ -1,0 +1,10 @@
+FROM ethereum/solc:0.8.20
+
+# Diretório de trabalho
+WORKDIR /contracts
+
+# main.sol será o alvo padrão
+ENTRYPOINT ["solc"]
+
+# Compila automaticamente o main.sol
+CMD ["--abi", "--bin", "src/main.sol", "-o", "build"]

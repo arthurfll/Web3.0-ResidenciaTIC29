@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  solidity:
+    build: .
+    container_name: solidity-solc
+    working_dir: /contracts
+    volumes:
+      - ./:/contracts
